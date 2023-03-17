@@ -28,7 +28,7 @@ const navigation = [
           {navigation.map(item=> (
             <a href={item.href} class="text-gray-400 hover:text-gray-500">
               <span class="sr-only">{item.name}</span>
-              <img class="h-6 w-6" aria-hidden="true" src={item.icon} alt="">
+              <img class="h-6 w-6" aria-hidden="true" src={item.icon} alt={`icone de ${item.name} representando midia social para me encontrar na web`}>
             </a>
           ))}
         </div>
