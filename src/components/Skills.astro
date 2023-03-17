@@ -1,0 +1,21 @@
+---
+import { freatures } from "../../services/skills";
+
+---
+    <div class="bg-indigo-700" id="stack">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <p class="text-center text-base font-semibold uppercase text-white tracking-wider">
+          Minha Stack
+        </p>
+        <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+            {freatures.map((freature) => (
+          <div class="col-span-1 flex justify-center items-center py-8 px-8 bg-indigo-800">
+              <span class="flex max-h-12 bg-indigo-800 text-indigo-300 text-3xl gap-3 font-semibold">
+                <freature.icon class="max-h-12 min-h-12 bg-indigo-800 text-indigo-300 text-3xl" />
+                <span class="text-2xl">{freature.name}</span>
+              </span>
+          </div>
+            ))}
+        </div>
+      </div>
+    </div>

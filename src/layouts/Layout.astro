@@ -1,4 +1,11 @@
 ---
+import Footer from '../components/Footer.astro';
+import { Header } from '../components/Header';
+import Hero from '../components/Hero.astro';
+import Projetos from '../components/Projetos.astro';
+import SkillDetails from '../components/SkillDetails.astro';
+import Skills from '../components/Skills.astro';
+
 export interface Props {
 	title: string;
 }
@@ -16,10 +23,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
+		<Hero />
+		<Skills />
+		<SkillDetails />
+		<Projetos />
 		<slot />
+		<Footer />
 	</body>
 </html>
-<style is:global>
+<!-- <style is:global>
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
@@ -32,4 +45,4 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
-</style>
+</style> -->
